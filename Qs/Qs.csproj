@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AA5C26C-7046-47FD-817D-6B1605A023C2}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Qs</RootNamespace>
+    <AssemblyName>Qs</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>none</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <LangVersion>4</LangVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseAddress>16384</BaseAddress>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Qs.Test</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\x64\Debugs\</OutputPath>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>none.ruleset</CodeAnalysisRuleSet>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <GenerateSerializationAssemblies>On</GenerateSerializationAssemblies>
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Device" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Enumerators\AsmDataType.cs" />
+    <Compile Include="Enumerators\Class1.cs" />
+    <Compile Include="Enumerators\Genre.cs" />
+    <Compile Include="Enumerators\SearcheMode.cs" />
+    <Compile Include="Enumerators\Script.cs" />
+    <Compile Include="Enumerators\CPUOperation.cs" />
+    <Compile Include="Enumerators\Kind.cs" />
+    <Compile Include="Enumerators\ValueType.cs" />
+    <Compile Include="Enumerators\Reg.cs" />
+    <Compile Include="Enumerators\OperandType.cs" />
+    <Compile Include="Enumerators\Regs.cs" />
+    <Compile Include="Errord.cs" />
+    <Compile Include="Help\Bit.cs" />
+    <Compile Include="Help\Const.cs" />
+    <Compile Include="Help\Extentions\Ext_Operand.cs" />
+    <Compile Include="Help\Nbit.cs" />
+    <Compile Include="IntelligentC\Optimization\TempFieldInfo.cs" />
+    <Compile Include="Interfaces\ICloneable.cs" />
+    <Compile Include="Interfaces\IScop.cs" />
+    <Compile Include="IO\Stream\StreamReader.cs" />
+    <Compile Include="IO\Stream\StreamWriter.cs" />
+    <Compile Include="Parse\BasicParse.cs" />
+    <Compile Include="Parse\Developed\ArrayCaller.cs" />
+    <Compile Include="Parse\Developed\AsmGoto.cs" />
+    <Compile Include="Parse\Developed\AsmLabel.cs" />
+    <Compile Include="Parse\Developed\Bloc.cs" />
+    <Compile Include="Parse\Developed\Boucle.cs" />
+    <Compile Include="Parse\Developed\CallParameter.cs" />
+    <Compile Include="Parse\Developed\Class.cs" />
+    <Compile Include="Parse\Developed\ComplexHeritachy.cs" />
+    <Compile Include="Parse\Developed\Constructor.cs" />
+    <Compile Include="Parse\Developed\DeclaredParams.cs" />
+    <Compile Include="Parse\Developed\Do.cs" />
+    <Compile Include="Parse\Developed\EPNames.cs" />
+    <Compile Include="Parse\Developed\EqAssign.cs" />
+    <Compile Include="Parse\Developed\For.cs" />
+    <Compile Include="Parse\Developed\Function.cs" />
+    <Compile Include="Parse\Developed\Goto.cs" />
+    <Compile Include="Parse\Developed\If.cs" />
+    <Compile Include="Parse\Developed\Instruction.cs" />
+    <Compile Include="Parse\Developed\Label.cs" />
+    <Compile Include="Internet\MyWebRequest.cs" />
+    <Compile Include="Parse\Developed\MethodCaller.cs" />
+    <Compile Include="Parse\Developed\Optimum.cs" />
+    <Compile Include="Parse\Developed\Parent.cs" />
+    <Compile Include="Parse\Developed\Return.cs" />
+    <Compile Include="Parse\Developed\Space.cs" />
+    <Compile Include="Parse\Developed\TypeAssign.cs" />
+    <Compile Include="Parse\Developed\When.cs" />
+    <Compile Include="Parse\Developed\While.cs" />
+    <Compile Include="Parse\Expressions\CalcTypes.cs" />
+    <Compile Include="Parse\ExtendParse.cs" />
+    <Compile Include="Parse\IParse.cs" />
+    <Compile Include="Parse\Utils\Descripter.cs" />
+    <Compile Include="Pdb\ByteCodeMapper.cs" />
+    <Compile Include="Pdb\CallManager.cs" />
+    <Compile Include="Pdb\Constants.cs" />
+    <Compile Include="Pdb\CPU\CPUByte.cs" />
+    <Compile Include="Pdb\CPU\CPUDouble.cs" />
+    <Compile Include="Pdb\CPU\CPUFloat.cs" />
+    <Compile Include="Pdb\CPU\CPUInt.cs" />
+    <Compile Include="Pdb\CPU\CPULong.cs" />
+    <Compile Include="Pdb\CPU\CPUShort.cs" />
+    <Compile Include="Pdb\CPU\CPUType.cs" />
+    <Compile Include="Pdb\CPU\CPUUInt.cs" />
+    <Compile Include="Pdb\CPU\CPUULong.cs" />
+    <Compile Include="Pdb\CPU\CPUUShort.cs" />
+    <Compile Include="Pdb\LoadClasses.cs" />
+    <Compile Include="Pdb\Pdb.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structures\BaseFieldInfo.cs" />
+    <Compile Include="Structures\Class.cs" />
+    <Compile Include="Structures\CurrentScop.cs" />
+    <Compile Include="Structures\DataPortor.cs" />
+    <Compile Include="Structures\MembreInfo.cs" />
+    <Compile Include="Structures\MethodInfo.cs" />
+    <Compile Include="Structures\Namespace.cs" />
+    <Compile Include="Structures\Scop.cs" />
+    <Compile Include="System\BiDictionary.cs" />
+    <Compile Include="System\KeyValuePair.cs" />
+    <Compile Include="Utils\Base\Builder.cs" />
+    <Compile Include="Utils\Base\CUal.cs" />
+    <Compile Include="Utils\Base\CPUFunction.cs" />
+    <Compile Include="Utils\Base\Pile.cs" />
+    <Compile Include="Utils\Base\Trace.cs" />
+    <Compile Include="Utils\Indexation\Assembly.cs" />
+    <Compile Include="Utils\Indexation\Find\Finder.cs" />
+    <Compile Include="Utils\Indexation\Find\HeritachyType.cs" />
+    <Compile Include="Utils\Indexation\Find\Heritachy.cs" />
+    <Compile Include="Utils\Indexation\Find\MethodCallHiretachy.cs" />
+    <Compile Include="Utils\Indexation\Label.cs" />
+    <Compile Include="Utils\Indexation\TypeCalc.cs" />
+    <Compile Include="Utils\Indexation\VariableGenerator.cs" />
+    <Compile Include="Utils\Indexation\VarManager.cs" />
+    <Compile Include="Utils\Syntax\Instruct.cs" />
+    <Compile Include="Utils\Syntax\Operand.cs" />
+    <Compile Include="Utils\Registers.cs" />
+    <Compile Include="Utils\Tree.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Parse\Scops\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="JavaScript1.js" />
+    <Content Include="Pdb\CPU\TextFile1.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

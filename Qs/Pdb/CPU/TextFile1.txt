@@ -1,0 +1,123 @@
+﻿
+Long :
+			ret=Long+ [Long|uint|int|ushort|short|byte];
+            /*
+                                    var r = l_a + l_b;
+                    000000ea  mov         eax,dword ptr [ebp-40h] 
+                    000000ed  mov         edx,dword ptr [ebp-3Ch] 
+                    000000f0  add         eax,dword ptr [ebp-48h] 
+                    000000f3  adc         edx,dword ptr [ebp-44h] 
+                    000000f6  mov         dword ptr [ebp-58h],eax 
+                    000000f9  mov         dword ptr [ebp-54h],edx */
+            /* 
+                                var ac = l_a + u_c;
+                    000000fc  mov         eax,dword ptr [ebp-40h] 
+                    000000ff  mov         edx,dword ptr [ebp-3Ch] 
+                    00000102  mov         ecx,dword ptr [ebp-4Ch] 
+                    00000105  xor         ebx,ebx 
+                    00000107  add         eax,ecx 
+                    00000109  adc         edx,ebx 
+                    0000010b  mov         dword ptr [ebp-60h],eax 
+                    0000010e  mov         dword ptr [ebp-5Ch],edx */
+            
+                /*
+                                var ad = l_a + i_d;
+                    00000111  mov         eax,dword ptr [ebp-40h] 
+                    00000114  mov         edx,dword ptr [ebp-3Ch] 
+                    00000117  mov         ecx,dword ptr [ebp-50h] 
+                    0000011a  mov         ebx,ecx 
+                    0000011c  sar         ebx,1Fh 
+                    0000011f  add         eax,ecx 
+                    00000121  adc         edx,ebx 
+                    00000123  mov         dword ptr [ebp-68h],eax 
+                    00000126  mov         dword ptr [ebp-64h],edx */
+           
+                /*
+                                var ae = l_a + us_e;
+                    00000129  mov         eax,dword ptr [ebp-40h] 
+                    0000012c  mov         edx,dword ptr [ebp-3Ch] 
+                    0000012f  mov         ecx,dword ptr [ebp-6Ch] 
+                    00000132  xor         ebx,ebx 
+                    00000134  add         eax,ecx 
+                    00000136  adc         edx,ebx 
+                    00000138  mov         dword ptr [ebp-7Ch],eax 
+                    0000013b  mov         dword ptr [ebp-78h],edx */
+
+           
+                /*
+                                var af = l_a + s_f;
+                    0000013e  mov         eax,dword ptr [ebp-40h] 
+                    00000141  mov         edx,dword ptr [ebp-3Ch] 
+                    00000144  mov         ecx,dword ptr [ebp-70h] 
+                    00000147  mov         ebx,ecx 
+                    00000149  sar         ebx,1Fh 
+                    0000014c  add         eax,ecx 
+                    0000014e  adc         edx,ebx 
+                    00000150  mov         dword ptr [ebp+FFFFFF7Ch],eax 
+                    00000156  mov         dword ptr [ebp-80h],edx */
+            
+                /*
+                                var ag = l_a + b_g;
+                    00000159  mov         eax,dword ptr [ebp-40h] 
+                    0000015c  mov         edx,dword ptr [ebp-3Ch] 
+                    0000015f  mov         ecx,dword ptr [ebp-74h] 
+                    00000162  xor         ebx,ebx 
+                    00000164  add         eax,ecx 
+                    00000166  adc         edx,ebx 
+                    00000168  mov         dword ptr [ebp+FFFFFF74h],eax 
+                    0000016e  mov         dword ptr [ebp+FFFFFF78h],edx */
+			ret=Long- [Long|uint|int|ushort|short|byte];
+								var r = l_a - l_b;
+					000000cf  mov         eax,dword ptr [ebp-0Ch] 
+					000000d2  mov         edx,dword ptr [ebp-8] 
+					000000d5  sub         eax,dword ptr [ebp-14h] 
+					000000d8  sbb         edx,dword ptr [ebp-10h] 
+					000000db  mov         dword ptr [ebp-30h],eax 
+					000000de  mov         dword ptr [ebp-2Ch],edx 
+								var ac = l_a - u_c;
+					000000e1  mov         eax,dword ptr [ebp-0Ch] 
+					000000e4  mov         edx,dword ptr [ebp-8] 
+					000000e7  mov         ecx,dword ptr [ebp-18h] 
+					000000ea  xor         ebx,ebx 
+					000000ec  sub         eax,ecx 
+					000000ee  sbb         edx,ebx 
+					000000f0  mov         dword ptr [ebp-38h],eax 
+					000000f3  mov         dword ptr [ebp-34h],edx 
+								var ad = l_a - i_d;
+					000000f6  mov         eax,dword ptr [ebp-0Ch] 
+					000000f9  mov         edx,dword ptr [ebp-8] 
+					000000fc  mov         ecx,dword ptr [ebp-1Ch] 
+					000000ff  mov         ebx,ecx 
+					00000101  sar         ebx,1Fh 
+					00000104  sub         eax,ecx 
+					00000106  sbb         edx,ebx 
+					00000108  mov         dword ptr [ebp-40h],eax 
+					0000010b  mov         dword ptr [ebp-3Ch],edx 
+								var ae = l_a - us_e;
+					0000010e  mov         eax,dword ptr [ebp-0Ch] 
+					00000111  mov         edx,dword ptr [ebp-8] 
+					00000114  mov         ecx,dword ptr [ebp-20h] 
+					00000117  xor         ebx,ebx 
+					00000119  sub         eax,ecx 
+					0000011b  sbb         edx,ebx 
+					0000011d  mov         dword ptr [ebp-48h],eax 
+					00000120  mov         dword ptr [ebp-44h],edx 
+								var af = l_a - s_f;
+					00000123  mov         eax,dword ptr [ebp-0Ch] 
+					00000126  mov         edx,dword ptr [ebp-8] 
+					00000129  mov         ecx,dword ptr [ebp-24h] 
+					0000012c  mov         ebx,ecx 
+					0000012e  sar         ebx,1Fh 
+					00000131  sub         eax,ecx 
+					00000133  sbb         edx,ebx 
+					00000135  mov         dword ptr [ebp-50h],eax 
+					00000138  mov         dword ptr [ebp-4Ch],edx 
+								var ag = l_a - b_g;
+					0000013b  mov         eax,dword ptr [ebp-0Ch] 
+					0000013e  mov         edx,dword ptr [ebp-8] 
+					00000141  mov         ecx,dword ptr [ebp-28h] 
+					00000144  xor         ebx,ebx 
+					00000146  sub         eax,ecx 
+					00000148  sbb         edx,ebx 
+					0000014a  mov         dword ptr [ebp-58h],eax 
+					0000014d  mov         dword ptr [ebp-54h],edx 

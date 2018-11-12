@@ -1,0 +1,6 @@
+E:\Progets\Qs\Code\Qs\Qs\bin\x64\Release\Qs.exe.config
+E:\Progets\Qs\Code\Qs\Qs\bin\x64\Release\Qs.exe
+E:\Progets\Qs\Code\Qs\Qs\bin\x64\Release\Qs.pdb
+E:\Progets\Qs\Code\Qs\Qs\obj\x64\Release\Qs.csprojResolveAssemblyReference.cache
+E:\Progets\Qs\Code\Qs\Qs\obj\x64\Release\Qs.exe
+E:\Progets\Qs\Code\Qs\Qs\obj\x64\Release\Qs.pdb

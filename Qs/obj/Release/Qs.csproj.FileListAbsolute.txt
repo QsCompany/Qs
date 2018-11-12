@@ -1,0 +1,4 @@
+E:\Progets\Qs\Code\Qs\Qs\obj\Release\Qs.csprojResolveAssemblyReference.cache
+E:\Progets\Qs\Code\Qs\Qs\bin\Release\Qs.dll.config
+E:\Progets\Qs\Code\Qs\Qs\bin\Release\Qs.dll
+E:\Progets\Qs\Code\Qs\Qs\obj\Release\Qs.dll
